@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Wed Nov 28 10:02:02 2018
+# Process ID: 2348
+# Current directory: Z:/CS-373-1/PasaGadi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10136 Z:\CS-373-1\PasaGadi\PasaGadi.xpr
+# Log file: Z:/CS-373-1/PasaGadi/vivado.log
+# Journal file: Z:/CS-373-1/PasaGadi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/CS-373-1/PasaGadi/PasaGadi.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 28 10:12:49 2018...
