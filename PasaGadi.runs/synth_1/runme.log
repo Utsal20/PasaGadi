@@ -14,35 +14,29 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8960 
+INFO: Helper process launched with PID 4528 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 356.770 ; gain = 99.289
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.363 ; gain = 98.801
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'bouncing_box' [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'bouncing_box' [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:17]
 INFO: [Synth 8-638] synthesizing module 'vga_sync' [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/vga_sync.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'vga_sync' (1#1) [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/vga_sync.vhd:16]
 INFO: [Synth 8-638] synthesizing module 'Synchronizer' [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/new/Synchronizer.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'Synchronizer' (2#1) [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/new/Synchronizer.vhd:15]
-WARNING: [Synth 8-614] signal 'track_l1' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:170]
-WARNING: [Synth 8-614] signal 'track_l2' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:170]
-WARNING: [Synth 8-614] signal 'track_r1' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:170]
-WARNING: [Synth 8-614] signal 'track_r2' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:170]
-WARNING: [Synth 8-614] signal 'car_xl' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:170]
-WARNING: [Synth 8-614] signal 'car_xr' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:170]
-WARNING: [Synth 8-614] signal 'car_yt' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:170]
-WARNING: [Synth 8-614] signal 'car_yb' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:170]
-INFO: [Synth 8-4471] merging register 'green_reg_reg[3:0]' into 'red_reg_reg[3:0]' [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:205]
-WARNING: [Synth 8-6014] Unused sequential element green_reg_reg was removed.  [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:205]
-WARNING: [Synth 8-3848] Net sclk in module/entity bouncing_box does not have driver. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:15]
-WARNING: [Synth 8-3848] Net mosi in module/entity bouncing_box does not have driver. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:16]
-WARNING: [Synth 8-3848] Net ss in module/entity bouncing_box does not have driver. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'bouncing_box' (3#1) [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:22]
-WARNING: [Synth 8-3331] design bouncing_box has unconnected port sclk
-WARNING: [Synth 8-3331] design bouncing_box has unconnected port mosi
-WARNING: [Synth 8-3331] design bouncing_box has unconnected port ss
-WARNING: [Synth 8-3331] design bouncing_box has unconnected port miso
+WARNING: [Synth 8-614] signal 'car_xl' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:184]
+WARNING: [Synth 8-614] signal 'car_xr' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:184]
+WARNING: [Synth 8-614] signal 'car_yt' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:184]
+WARNING: [Synth 8-614] signal 'car_yb' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:184]
+WARNING: [Synth 8-614] signal 'box_xl' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:184]
+WARNING: [Synth 8-614] signal 'box_xr' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:184]
+WARNING: [Synth 8-614] signal 'box_yt' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:184]
+WARNING: [Synth 8-614] signal 'box_yb' is read in the process but is not in the sensitivity list [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:184]
+WARNING: [Synth 8-6014] Unused sequential element inccc_reg was removed.  [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:175]
+INFO: [Synth 8-4471] merging register 'blue_reg_reg[3:0]' into 'green_reg_reg[3:0]' [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:248]
+WARNING: [Synth 8-6014] Unused sequential element blue_reg_reg was removed.  [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:248]
+INFO: [Synth 8-256] done synthesizing module 'bouncing_box' (3#1) [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd:17]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 412.094 ; gain = 154.613
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.426 ; gain = 153.863
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -55,10 +49,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 412.094 ; gain = 154.613
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.426 ; gain = 153.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 412.094 ; gain = 154.613
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.426 ; gain = 153.863
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -66,6 +60,18 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'miso'. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc:189]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc:189]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi'. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc:190]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc:190]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sclk'. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc:191]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc:191]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ss'. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc:192]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc:192]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Z:/CS-373-1/PasaGadi/PasaGadi.srcs/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bouncing_box_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/bouncing_box_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -74,33 +80,39 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 756.668 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 758.051 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 756.668 ; gain = 499.188
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 758.051 ; gain = 500.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 756.668 ; gain = 499.188
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 758.051 ; gain = 500.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 756.668 ; gain = 499.188
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 758.051 ; gain = 500.488
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "v_end" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "h_end" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "x" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "x" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dir_x2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dir_x2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "x2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "x2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "red_reg" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "blue_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dir_y2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dir_y2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "y2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "y2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 756.668 ; gain = 499.188
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 758.051 ; gain = 500.488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -113,25 +125,25 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 9     
 	   2 Input     10 Bit       Adders := 2     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 6     
+	               32 Bit    Registers := 12    
 	               10 Bit    Registers := 2     
 	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 11    
 +---Muxes : 
-	   5 Input     32 Bit        Muxes := 2     
-	   4 Input     32 Bit        Muxes := 2     
-	   3 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 5     
-	   5 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -142,19 +154,20 @@ Hierarchical RTL Component report
 Module bouncing_box 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 9     
 +---Registers : 
-	               32 Bit    Registers := 6     
+	               32 Bit    Registers := 12    
 	                4 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   5 Input     32 Bit        Muxes := 2     
-	   4 Input     32 Bit        Muxes := 2     
-	   3 Input     32 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 5     
-	   5 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 2     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module vga_sync 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -187,82 +200,115 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "vga_sync_unit/v_end" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "vga_sync_unit/h_end" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3331] design bouncing_box has unconnected port sclk
-WARNING: [Synth 8-3331] design bouncing_box has unconnected port mosi
-WARNING: [Synth 8-3331] design bouncing_box has unconnected port ss
-WARNING: [Synth 8-3331] design bouncing_box has unconnected port miso
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\dir_y_reg[0] )
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[1]' (FDSE) to 'dir_y_reg[2]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[2]' (FDSE) to 'dir_y_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\dir_x_reg[0] )
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[1]' (FDSE) to 'dir_x_reg[2]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[2]' (FDSE) to 'dir_x_reg[3]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[3]' (FDSE) to 'dir_y_reg[4]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[4]' (FDSE) to 'dir_y_reg[5]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[5]' (FDSE) to 'dir_y_reg[6]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[6]' (FDSE) to 'dir_y_reg[7]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[7]' (FDSE) to 'dir_y_reg[8]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[8]' (FDSE) to 'dir_y_reg[9]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[9]' (FDSE) to 'dir_y_reg[10]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[10]' (FDSE) to 'dir_y_reg[11]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[11]' (FDSE) to 'dir_y_reg[12]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[12]' (FDSE) to 'dir_y_reg[13]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[13]' (FDSE) to 'dir_y_reg[14]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[14]' (FDSE) to 'dir_y_reg[15]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[15]' (FDSE) to 'dir_y_reg[16]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[16]' (FDSE) to 'dir_y_reg[17]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[17]' (FDSE) to 'dir_y_reg[18]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[18]' (FDSE) to 'dir_y_reg[19]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[19]' (FDSE) to 'dir_y_reg[20]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[20]' (FDSE) to 'dir_y_reg[21]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[21]' (FDSE) to 'dir_y_reg[22]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[22]' (FDSE) to 'dir_y_reg[23]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[23]' (FDSE) to 'dir_y_reg[24]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[24]' (FDSE) to 'dir_y_reg[25]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[25]' (FDSE) to 'dir_y_reg[26]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[26]' (FDSE) to 'dir_y_reg[27]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[27]' (FDSE) to 'dir_y_reg[28]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[28]' (FDSE) to 'dir_y_reg[29]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[29]' (FDSE) to 'dir_y_reg[30]'
-INFO: [Synth 8-3886] merging instance 'dir_y_reg[30]' (FDSE) to 'dir_y_reg[31]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[3]' (FDSE) to 'dir_x_reg[4]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[4]' (FDSE) to 'dir_x_reg[5]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[5]' (FDSE) to 'dir_x_reg[6]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[6]' (FDSE) to 'dir_x_reg[7]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[7]' (FDSE) to 'dir_x_reg[8]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[8]' (FDSE) to 'dir_x_reg[9]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[9]' (FDSE) to 'dir_x_reg[10]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[10]' (FDSE) to 'dir_x_reg[11]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[11]' (FDSE) to 'dir_x_reg[12]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[12]' (FDSE) to 'dir_x_reg[13]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[13]' (FDSE) to 'dir_x_reg[14]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[14]' (FDSE) to 'dir_x_reg[15]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[15]' (FDSE) to 'dir_x_reg[16]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[16]' (FDSE) to 'dir_x_reg[17]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[17]' (FDSE) to 'dir_x_reg[18]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[18]' (FDSE) to 'dir_x_reg[19]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[19]' (FDSE) to 'dir_x_reg[20]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[20]' (FDSE) to 'dir_x_reg[21]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[21]' (FDSE) to 'dir_x_reg[22]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[22]' (FDSE) to 'dir_x_reg[23]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[23]' (FDSE) to 'dir_x_reg[24]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[24]' (FDSE) to 'dir_x_reg[25]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[25]' (FDSE) to 'dir_x_reg[26]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[26]' (FDSE) to 'dir_x_reg[27]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[27]' (FDSE) to 'dir_x_reg[28]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[28]' (FDSE) to 'dir_x_reg[29]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[29]' (FDSE) to 'dir_x_reg[30]'
-INFO: [Synth 8-3886] merging instance 'dir_x_reg[30]' (FDSE) to 'dir_x_reg[31]'
-INFO: [Synth 8-3886] merging instance 'blue_reg_reg[0]' (FD) to 'blue_reg_reg[2]'
-INFO: [Synth 8-3886] merging instance 'blue_reg_reg[2]' (FD) to 'blue_reg_reg[3]'
-INFO: [Synth 8-3886] merging instance 'red_reg_reg[0]' (FDS) to 'red_reg_reg[2]'
-INFO: [Synth 8-3886] merging instance 'red_reg_reg[2]' (FDS) to 'red_reg_reg[3]'
-WARNING: [Synth 8-3332] Sequential element (dir_x_reg[0]) is unused and will be removed from module bouncing_box.
-WARNING: [Synth 8-3332] Sequential element (dir_y_reg[0]) is unused and will be removed from module bouncing_box.
+INFO: [Synth 8-5546] ROM "v_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "h_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\dir_y2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[1]' (FDSE) to 'dir_y2_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\dir_x2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[1]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[1]' (FD) to 'dir_y_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[2]' (FD) to 'dir_y_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[1]' (FD) to 'dir_x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[2]' (FD) to 'dir_x_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[2]' (FDSE) to 'dir_y2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[3]' (FDSE) to 'dir_y2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[4]' (FDSE) to 'dir_y2_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[5]' (FDSE) to 'dir_y2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[6]' (FDSE) to 'dir_y2_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[7]' (FDSE) to 'dir_y2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[8]' (FDSE) to 'dir_y2_reg[9]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[9]' (FDSE) to 'dir_y2_reg[10]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[10]' (FDSE) to 'dir_y2_reg[11]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[11]' (FDSE) to 'dir_y2_reg[12]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[12]' (FDSE) to 'dir_y2_reg[13]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[13]' (FDSE) to 'dir_y2_reg[14]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[14]' (FDSE) to 'dir_y2_reg[15]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[15]' (FDSE) to 'dir_y2_reg[16]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[16]' (FDSE) to 'dir_y2_reg[17]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[17]' (FDSE) to 'dir_y2_reg[18]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[18]' (FDSE) to 'dir_y2_reg[19]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[19]' (FDSE) to 'dir_y2_reg[20]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[20]' (FDSE) to 'dir_y2_reg[21]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[21]' (FDSE) to 'dir_y2_reg[22]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[22]' (FDSE) to 'dir_y2_reg[23]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[23]' (FDSE) to 'dir_y2_reg[24]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[24]' (FDSE) to 'dir_y2_reg[25]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[25]' (FDSE) to 'dir_y2_reg[26]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[26]' (FDSE) to 'dir_y2_reg[27]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[27]' (FDSE) to 'dir_y2_reg[28]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[28]' (FDSE) to 'dir_y2_reg[29]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[29]' (FDSE) to 'dir_y2_reg[30]'
+INFO: [Synth 8-3886] merging instance 'dir_y2_reg[30]' (FDSE) to 'dir_y2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[2]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[3]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[4]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[5]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[6]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[7]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[8]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[9]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[10]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[11]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[12]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[13]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[14]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[15]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[16]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[17]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[18]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[19]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[20]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[21]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[22]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[23]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[24]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[25]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[26]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[27]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[28]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[29]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x2_reg[30]' (FDSE) to 'dir_x2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[3]' (FD) to 'dir_y_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[4]' (FD) to 'dir_y_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[5]' (FD) to 'dir_y_reg[6]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[6]' (FD) to 'dir_y_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[7]' (FD) to 'dir_y_reg[8]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[8]' (FD) to 'dir_y_reg[9]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[9]' (FD) to 'dir_y_reg[10]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[10]' (FD) to 'dir_y_reg[11]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[11]' (FD) to 'dir_y_reg[12]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[12]' (FD) to 'dir_y_reg[13]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[13]' (FD) to 'dir_y_reg[14]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[14]' (FD) to 'dir_y_reg[15]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[15]' (FD) to 'dir_y_reg[16]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[16]' (FD) to 'dir_y_reg[17]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[17]' (FD) to 'dir_y_reg[18]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[18]' (FD) to 'dir_y_reg[19]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[19]' (FD) to 'dir_y_reg[20]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[20]' (FD) to 'dir_y_reg[21]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[21]' (FD) to 'dir_y_reg[22]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[22]' (FD) to 'dir_y_reg[23]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[23]' (FD) to 'dir_y_reg[24]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[24]' (FD) to 'dir_y_reg[25]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[25]' (FD) to 'dir_y_reg[26]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[26]' (FD) to 'dir_y_reg[27]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[27]' (FD) to 'dir_y_reg[28]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[28]' (FD) to 'dir_y_reg[29]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[29]' (FD) to 'dir_y_reg[30]'
+INFO: [Synth 8-3886] merging instance 'dir_y_reg[30]' (FD) to 'dir_y_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[3]' (FD) to 'dir_x_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[4]' (FD) to 'dir_x_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[5]' (FD) to 'dir_x_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[6]' (FD) to 'dir_x_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[7]' (FD) to 'dir_x_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[8]' (FD) to 'dir_x_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[9]' (FD) to 'dir_x_reg[31]'
+INFO: [Synth 8-3886] merging instance 'dir_x_reg[10]' (FD) to 'dir_x_reg[31]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (dir_x2_reg[0]) is unused and will be removed from module bouncing_box.
+WARNING: [Synth 8-3332] Sequential element (dir_y2_reg[0]) is unused and will be removed from module bouncing_box.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 756.668 ; gain = 499.188
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 758.051 ; gain = 500.488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -274,13 +320,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 756.668 ; gain = 499.188
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 758.051 ; gain = 500.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 756.668 ; gain = 499.188
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 758.051 ; gain = 500.488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -292,7 +338,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 761.309 ; gain = 503.828
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 773.090 ; gain = 515.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -316,7 +362,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 761.309 ; gain = 503.828
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 773.090 ; gain = 515.527
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -329,7 +375,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 761.309 ; gain = 503.828
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 773.090 ; gain = 515.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -341,25 +387,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 761.309 ; gain = 503.828
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 773.090 ; gain = 515.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 761.309 ; gain = 503.828
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 773.090 ; gain = 515.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 761.309 ; gain = 503.828
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 773.090 ; gain = 515.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 761.309 ; gain = 503.828
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 773.090 ; gain = 515.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -376,48 +422,52 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     3|
-|2     |CARRY4 |    96|
-|3     |LUT1   |    33|
-|4     |LUT2   |   251|
-|5     |LUT3   |    16|
-|6     |LUT4   |    47|
-|7     |LUT5   |     7|
-|8     |LUT6   |    18|
+|2     |CARRY4 |   176|
+|3     |LUT1   |    99|
+|4     |LUT2   |   477|
+|5     |LUT3   |    32|
+|6     |LUT4   |   104|
+|7     |LUT5   |    13|
+|8     |LUT6   |    42|
 |9     |FDCE   |    24|
-|10    |FDRE   |   161|
-|11    |FDSE   |    14|
+|10    |FDRE   |   281|
+|11    |FDSE   |    24|
 |12    |IBUF   |     6|
 |13    |OBUF   |    14|
-|14    |OBUFT  |     3|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------+---------------+------+
 |      |Instance        |Module         |Cells |
 +------+----------------+---------------+------+
-|1     |top             |               |   693|
-|2     |  sync_d        |Synchronizer   |     2|
-|3     |  sync_l        |Synchronizer_0 |     2|
+|1     |top             |               |  1295|
+|2     |  sync_d        |Synchronizer   |     3|
+|3     |  sync_l        |Synchronizer_0 |     3|
 |4     |  sync_r        |Synchronizer_1 |     3|
 |5     |  sync_u        |Synchronizer_2 |     3|
-|6     |  vga_sync_unit |vga_sync       |   121|
+|6     |  vga_sync_unit |vga_sync       |   231|
 +------+----------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 761.309 ; gain = 503.828
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 773.090 ; gain = 515.527
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 761.309 ; gain = 159.254
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 761.309 ; gain = 503.828
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 773.090 ; gain = 168.902
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 773.090 ; gain = 515.527
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 102 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 182 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'bouncing_box' is not ideal for floorplanning, since the cellview 'bouncing_box' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-95 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+138 Infos, 17 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 771.438 ; gain = 526.965
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 775.859 ; gain = 531.301
 WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'Z:/CS-373-1/PasaGadi/PasaGadi.runs/synth_1/bouncing_box.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bouncing_box_utilization_synth.rpt -pb bouncing_box_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 775.859 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 10 02:02:53 2018...
