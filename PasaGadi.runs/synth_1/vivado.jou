@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Sun Dec  9 20:21:03 2018
+# Process ID: 8784
+# Current directory: Z:/CS-373-1/PasaGadi/PasaGadi.runs/synth_1
+# Command line: vivado.exe -log bouncing_box.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bouncing_box.tcl
+# Log file: Z:/CS-373-1/PasaGadi/PasaGadi.runs/synth_1/bouncing_box.vds
+# Journal file: Z:/CS-373-1/PasaGadi/PasaGadi.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source bouncing_box.tcl -notrace

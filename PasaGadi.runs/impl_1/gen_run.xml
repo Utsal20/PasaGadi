@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544415660">
+  <File Type="BITSTR-BMM" Name="bouncing_box_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="bouncing_box_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="bouncing_box_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="bouncing_box_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="bouncing_box.tcl"/>
+  <File Type="OPT-TIMING" Name="bouncing_box_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="bouncing_box_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="bouncing_box_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="bouncing_box_reports.tcl"/>
+  <File Type="OPT-DRC" Name="bouncing_box_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="bouncing_box.hwdef"/>
+  <File Type="PWROPT-DCP" Name="bouncing_box_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="bouncing_box_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="bouncing_box_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="bouncing_box_placed.dcp"/>
+  <File Type="PLACE-IO" Name="bouncing_box_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="bouncing_box_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="bouncing_box_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="bouncing_box_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="bouncing_box_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="bouncing_box_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="bouncing_box_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="bouncing_box.bgn"/>
+  <File Type="PLACE-TIMING" Name="bouncing_box_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="bouncing_box_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="bouncing_box.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="bouncing_box_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="bouncing_box_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="bouncing_box_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="bouncing_box.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="bouncing_box_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="bouncing_box_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="bouncing_box_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="bouncing_box_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="bouncing_box_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="bouncing_box_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="bouncing_box.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="bouncing_box_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="bouncing_box.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="bouncing_box_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="bouncing_box_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="bouncing_box.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="bouncing_box_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="bouncing_box_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="bouncing_box_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="bouncing_box_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="bouncing_box_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="bouncing_box_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="bouncing_box_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="bouncing_box_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="bouncing_box_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="bouncing_box_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="bouncing_box_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="bouncing_box_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="bouncing_box_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="bouncing_box_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="bouncing_box_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="bouncing_box_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="bouncing_box_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="bouncing_box_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="bouncing_box_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="bouncing_box.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="bouncing_box_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="bouncing_box.rbt"/>
+  <File Type="BITSTR-NKY" Name="bouncing_box.nky"/>
+  <File Type="BG-DRC" Name="bouncing_box.drc"/>
+  <File Type="RDI-RDI" Name="bouncing_box.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/new/Synchronizer.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/asthapit21/Desktop/2_bouncing_box_with_collisions_and_buttons/bouncing_box_with_collisions_and_buttons.srcs/sources_1/new/Synchronizer.vhd"/>
+        <Attr Name="ImportTime" Val="1543247587"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/vga_sync.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/asthapit21/Desktop/2_bouncing_box_with_collisions_and_buttons/bouncing_box_with_collisions_and_buttons.srcs/sources_1/imports/bouncing_box_with_background_and_btn/vga_sync.vhd"/>
+        <Attr Name="ImportTime" Val="1511299602"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/asthapit21/Desktop/2_bouncing_box_with_collisions_and_buttons/bouncing_box_with_collisions_and_buttons.srcs/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd"/>
+        <Attr Name="ImportTime" Val="1543249034"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/AccelerometerCtl.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/imports/src/hdl/AccelerometerCtl.vhd"/>
+        <Attr Name="ImportTime" Val="1543428624"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/AccelArithmetics.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/imports/src/hdl/AccelArithmetics.vhd"/>
+        <Attr Name="ImportTime" Val="1543428624"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/SPI_If.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/imports/src/hdl/SPI_If.vhd"/>
+        <Attr Name="ImportTime" Val="1543428625"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/ADXL362Ctrl.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/imports/src/hdl/ADXL362Ctrl.vhd"/>
+        <Attr Name="ImportTime" Val="1543428624"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/ip/Square_Root/Square_Root.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="bouncing_box"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/CS-373-1/Nexys4DDR_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Nexys4DDR_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1540226489"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

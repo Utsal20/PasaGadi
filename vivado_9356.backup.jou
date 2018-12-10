@@ -1,0 +1,54 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Sun Dec  9 13:20:17 2018
+# Process ID: 9356
+# Current directory: Z:/CS-373-1/PasaGadi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9328 Z:\CS-373-1\PasaGadi\PasaGadi.xpr
+# Log file: Z:/CS-373-1/PasaGadi/vivado.log
+# Journal file: Z:/CS-373-1/PasaGadi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/CS-373-1/PasaGadi/PasaGadi.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {Z:/CS-373-1/PasaGadi/PasaGadi.runs/impl_1/bouncing_box.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {Z:/CS-373-1/PasaGadi/PasaGadi.runs/impl_1/bouncing_box.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {Z:/CS-373-1/PasaGadi/PasaGadi.runs/impl_1/bouncing_box.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+import_files -norecurse Z:/CS-373-1/z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/imports/src/hdl/AccelerometerCtl.vhd
+update_compile_order -fileset sources_1
+import_files -norecurse {Z:/CS-373-1/z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/imports/src/hdl/AccelArithmetics.vhd Z:/CS-373-1/z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/imports/src/hdl/SPI_If.vhd Z:/CS-373-1/z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/imports/src/hdl/ADXL362Ctrl.vhd}
+update_compile_order -fileset sources_1
+import_files -norecurse Z:/CS-373-1/z/vivado_proj/Nexys-4-DDR-OOB.srcs/sources_1/ip/Square_Root/Square_Root.xci
