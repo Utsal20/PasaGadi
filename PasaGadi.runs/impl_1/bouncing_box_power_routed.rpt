@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Mon Dec 10 22:17:32 2018
+| Date             : Tue Dec 11 00:17:54 2018
 | Host             : LAB-SCI-214-12 running 64-bit major release  (build 9200)
 | Command          : report_power -file bouncing_box_power_routed.rpt -pb bouncing_box_power_summary_routed.pb -rpx bouncing_box_power_routed.rpx
 | Design           : bouncing_box
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 23.442 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 29.830 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 22.645                           |
+| Dynamic (W)              | 29.033                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     7.576 |     2001 |       --- |             --- |
-|   LUT as Logic |     6.184 |      885 |     63400 |            1.40 |
-|   CARRY4       |     0.917 |      285 |     15850 |            1.80 |
-|   Register     |     0.460 |      536 |    126800 |            0.42 |
-|   BUFG         |     0.015 |        3 |        32 |            9.38 |
+| Slice Logic    |    11.420 |     2380 |       --- |             --- |
+|   LUT as Logic |     9.932 |     1062 |     63400 |            1.68 |
+|   CARRY4       |     1.025 |      325 |     15850 |            2.05 |
+|   Register     |     0.455 |      537 |    126800 |            0.42 |
+|   BUFG         |     0.008 |        3 |        32 |            9.38 |
 |   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |     6.780 |     1173 |       --- |             --- |
-| I/O            |     8.290 |       40 |       210 |           19.05 |
+| Signals        |     9.315 |     1232 |       --- |             --- |
+| I/O            |     8.298 |       40 |       210 |           19.05 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    23.442 |          |           |                 |
+| Total          |    29.830 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    14.938 |      14.376 |      0.563 |
+| Vccint    |       1.000 |    21.318 |      20.755 |      0.563 |
 | Vccaux    |       1.800 |     0.396 |       0.303 |      0.093 |
-| Vcco33    |       3.300 |     2.345 |       2.341 |      0.004 |
+| Vcco33    |       3.300 |     2.347 |       2.343 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,13 +138,13 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| bouncing_box    |    22.645 |
-|   seg           |     0.270 |
-|   sync_d        |     0.014 |
-|   sync_l        |     0.015 |
-|   sync_r        |     0.015 |
-|   sync_u        |     0.013 |
-|   vga_sync_unit |     1.460 |
+| bouncing_box    |    29.033 |
+|   seg           |     0.240 |
+|   sync_d        |     0.013 |
+|   sync_l        |     0.014 |
+|   sync_r        |     0.013 |
+|   sync_u        |     0.012 |
+|   vga_sync_unit |     1.397 |
 +-----------------+-----------+
 
 

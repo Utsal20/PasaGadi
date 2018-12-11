@@ -32,7 +32,8 @@ architecture bouncing_box of bouncing_box is
    signal btn_l, btn_r, btn_u, btn_d: std_logic;  -- synchronized buttons
    -- spaceship
    signal dir_x, dir_y : integer := 1;  
-   signal x, y, next_x, next_y : integer := 0;       
+   signal x, y : integer := 500;
+   signal next_x, next_y : integer := 500;       
    signal car_xl, car_yt, car_xr, car_yb : integer := 0;
    signal sp_size : integer := 40;
    -- alien 1
@@ -44,10 +45,12 @@ architecture bouncing_box of bouncing_box is
    signal dir_x3, dir_y3 : integer := 2;
    signal x3, y3, next_x3, next_y3 : integer := 0;
    signal alien3_xl, alien3_yt, alien3_xr, alien3_yb : integer := 0;
-   signal al3_size : integer := 10;
+   signal al3_size : integer := 14;
    -- score
    signal score : integer := 0;
    signal switchesss : std_logic_vector(15 downto 0);
+   
+   signal gameover : integer := 0;
    
    signal update_pos : std_logic := '0';  
    
@@ -101,14 +104,14 @@ begin
         if rising_edge(video_on) then
             counter := counter + 1;
             scorecounter := scorecounter + 1;
-            if counter > 120 then                           -- INCREASE COUNTER TO SLOW DOWN THE PROGRAM ?????
+            if (counter > 120) and (gameover=0) then                           -- INCREASE COUNTER TO SLOW DOWN THE PROGRAM ?????
                 counter := 0;
                 update_pos <= '1';
             else
                 update_pos <= '0';
             end if;
             
-            if scorecounter > 1000 then
+            if (scorecounter > 1000) and (gameover=0) then
                 scorecounter := 0;
                 score <= score + 1;
                 switchesss <= std_logic_vector(to_signed(score, switchesss'length));
@@ -121,12 +124,12 @@ begin
 	
 	-- the MUX that computes the next value of x. Anything that can affect
 	-- x must be computed within this mux since a signal can only have one driver
-	-- compute collision in x or change direction if btn_r or btn_l is pressed
+
 	-- X DIRECTION CALCULATIONS
-	process ( btn_r, btn_l, dir_x, clk, car_xr, car_xl, car_yt, car_yb, dir_x2,alien_xl,alien_xr,alien_yt,alien_yb, dir_x3,alien3_xl,alien3_xr,alien3_yt,alien3_yb )
+	process ( btn_r,btn_l,clk , dir_x,car_xr,car_xl,car_yt,car_yb , dir_x2,alien_xl,alien_xr,alien_yt,alien_yb , dir_x3,alien3_xl,alien3_xr,alien3_yt,alien3_yb )
 	begin
         if rising_edge(clk) then 
-            
+            -- spaceship movement
 		    if (car_xr > 639) and (dir_x = 1) then
                 dir_x <= -1;
 				x <= 639 - sp_size;				
@@ -171,10 +174,10 @@ begin
 
 
 	-- Y DIRECTION CALCULATIONS
-	process ( btn_u, btn_d, dir_y, clk, car_xr, car_xl, car_yt, car_yb, dir_y2,alien_xl,alien_xr,alien_yt,alien_yb, dir_y3,alien3_xl,alien3_xr,alien3_yt,alien3_yb)
+	process ( btn_u,btn_d,clk , dir_y,car_xr,car_xl,car_yt,car_yb , dir_y2,alien_xl,alien_xr,alien_yt,alien_yb , dir_y3,alien3_xl,alien3_xr,alien3_yt,alien3_yb )
 	begin
         if rising_edge(clk) then 
-                
+            -- spaceship y movement
 		    if (car_yb > 479) and (dir_y = 1) then
                 dir_y <= -1;
                 y <= 479 - sp_size;
@@ -230,6 +233,31 @@ begin
     end process;
     
     
+    -- COLLISION CHECKS
+    process ( car_xr,car_xl,car_yt,car_yb , alien_xl,alien_xr,alien_yt,alien_yb )
+    begin
+        if rising_edge(clk) then
+            -- top collision
+            if (alien_xr >= car_xl) and (alien_xl <= car_xr) and ( (alien_yb <= car_yt) and (alien_yt >= car_yt) ) then
+                gameover <= 1;
+                --if ( gameover = 1) then gameover<=0; else gameover<=1; end if;
+            -- bottom collision
+            elsif (alien_xr >= car_xl) and (alien_xl <= car_xr) and ( (alien_yb <= car_yb) and (alien_yt >= car_yb) ) then
+                gameover <= 1;
+                --if ( gameover = 1) then gameover<=0; else gameover<=1; end if;
+            -- left collision
+            elsif (alien_yt <= car_yb) and (alien_yb >= car_yt) and ( (alien_xl <= car_xl) and (alien_xr >= car_xl) ) then
+                gameover <= 1;
+                --if ( gameover = 1) then gameover<=0; else gameover<=1; end if;
+            -- right collision
+            elsif (alien_yt <= car_yb) and (alien_yb >= car_yt) and ( (alien_xr >= car_xr) and (alien_xl <= car_xr) ) then
+                gameover <= 1;
+                --if ( gameover = 1) then gameover<=0; else gameover<=1; end if;
+            end if;
+        end if;
+    end process;
+    
+    
     
     
     -- DRAW STUFF
@@ -253,8 +281,13 @@ begin
                
            -- DRAW ALIEN 3
            elsif (unsigned(pixel_x) > alien3_xl) and (unsigned(pixel_x) < alien3_xr) and
-           (unsigned(pixel_y) > alien3_yt) and (unsigned(pixel_y) < alien3_yb) then
+           (unsigned(pixel_y) > alien3_yt) and (unsigned(pixel_y) < alien3_yb) and (gameover=0) then
                red_next <= "0000";
+               green_next <= "1111";
+               blue_next <= "0000";
+           elsif (unsigned(pixel_x) > alien3_xl) and (unsigned(pixel_x) < alien3_xr) and
+           (unsigned(pixel_y) > alien3_yt) and (unsigned(pixel_y) < alien3_yb) and (gameover=1) then
+               red_next <= "1111";
                green_next <= "1111";
                blue_next <= "0000";
 
