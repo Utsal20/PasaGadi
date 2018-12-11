@@ -598,3 +598,7 @@ INFO: [Common 17-83] Releasing license: Synthesis
 synth_design completed successfully
 synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 787.438 ; gain = 542.910
 WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'Z:/CS-373-1/PasaGadi/PasaGadi.runs/synth_1/bouncing_box.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bouncing_box_utilization_synth.rpt -pb bouncing_box_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 787.438 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 11 00:16:28 2018...

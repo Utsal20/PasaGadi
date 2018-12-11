@@ -522,3 +522,9 @@ Creating bitstream...
 Writing bitstream ./bouncing_box.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'Z:/CS-373-1/PasaGadi/PasaGadi.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Dec 11 00:18:12 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+85 Infos, 27 Warnings, 22 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1805.039 ; gain = 436.289
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 11 00:18:13 2018...
