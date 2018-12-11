@@ -26,13 +26,12 @@ architecture bouncing_box of bouncing_box is
    signal dir_x, dir_y : integer := 1;  
    signal x, y, next_x, next_y : integer := 0;       
    signal car_xl, car_yt, car_xr, car_yb : integer := 0;
-   -- box
-   signal dir_x2, dir_y2, inccc : integer := 1;
+   -- alien
+   signal dir_x2, dir_y2, speed : integer := 1;
    signal x2, y2, next_x2, next_y2 : integer := 0;
-   signal box_xl, box_yt, box_xr, box_yb : integer := 0;
-   
-   -- tracks
-   --signal track_l1, track_l2, track_r1, track_r2 : integer := 0;
+   signal alien_xl, alien_yt, alien_xr, alien_yb : integer := 0;
+   -- score
+   signal score : integer := 0;
    
    signal update_pos : std_logic := '0';  
    
@@ -53,12 +52,6 @@ begin
     sync_u: entity work.synchronizer port map( clk=>clk, a=>BTNU, b=>btn_u );
     sync_d: entity work.synchronizer port map( clk=>clk, a=>BTND, b=>btn_d );       
       
-    
-    -- TRACK POSITION
---    track_l1 <= 100;
---    track_l2 <= 105;
---    track_r1 <= 500;
---    track_r2 <= 505;
       
     -- CAR position
     car_xl <= x;  
@@ -66,23 +59,34 @@ begin
     car_xr <= x + 60;
     car_yb <= y + 60;  
     
-    -- box position
-    box_xl <= x2;  
-    box_yt <= y2;
-    box_xr <= x2 + 20;
-    box_yb <= y2 + 20;  
+    -- alien position
+    alien_xl <= x2;  
+    alien_yt <= y2;
+    alien_xr <= x2 + 20;
+    alien_yb <= y2 + 20;  
+    
+    
+    
     
     -- process to generate update position signal
     process ( video_on )
         variable counter : integer := 0;
+        variable speedcounter : integer := 0;
     begin
         if rising_edge(video_on) then
             counter := counter + 1;
-            if counter > 120 then                           -- INCREASE COUNTER TO SLOW DOWN THE PROGRAM
+            speedcounter := speedcounter + 1;
+            if counter > 120 then                           -- INCREASE COUNTER TO SLOW DOWN THE PROGRAM ?????
                 counter := 0;
                 update_pos <= '1';
             else
                 update_pos <= '0';
+            end if;
+            
+            if speedcounter > 1000 then
+                speedcounter := 0;
+                speed <= speed + 1;
+                score <= score + 1;
             end if;
          end if;
     end process;
@@ -94,7 +98,7 @@ begin
 	-- x must be computed within this mux since a signal can only have one driver
 	-- compute collision in x or change direction if btn_r or btn_l is pressed
 	-- X DIRECTION CALCULATIONS
-	process ( btn_r, btn_l, dir_x, clk, car_xr, car_xl, car_yt, car_yb, dir_x2,box_xl,box_xr,box_yt,box_yb)
+	process ( btn_r, btn_l, dir_x, clk, car_xr, car_xl, car_yt, car_yb, dir_x2,alien_xl,alien_xr,alien_yt,alien_yb)
 	begin
         if rising_edge(clk) then 
             
@@ -115,11 +119,11 @@ begin
 				x <= next_x;
             end if;
             -- alien x position
-            if (box_xr > 639) and (dir_x2 >= 1) then
-                dir_x2 <= -1;
+            if (alien_xr > 639) and (dir_x2 >= 1) then
+                dir_x2 <= 0-1;
                 x2 <= 619;                
-            elsif (box_xl < 1) and (dir_x2 <= -1) then
-                dir_x2 <= 1;   
+            elsif (alien_xl < 1) and (dir_x2 <= -1) then
+                dir_x2 <= 0+1;   
                 x2 <= 0;                
             else 
                 dir_x2 <= dir_x2;
@@ -130,7 +134,7 @@ begin
 	
 	-- compute collision in y or change direction if btn_u or btn_d is pressed
 	-- Y DIRECTION CALCULATIONS
-	process ( btn_u, btn_d, dir_y, clk, car_xr, car_xl, car_yt, car_yb, dir_y2,box_xl,box_xr,box_yt,box_yb)
+	process ( btn_u, btn_d, dir_y, clk, car_xr, car_xl, car_yt, car_yb, dir_y2,alien_xl,alien_xr,alien_yt,alien_yb)
 	begin
         if rising_edge(clk) then 
                 
@@ -151,11 +155,11 @@ begin
 				y <= next_y;
             end if;
             --alien y position
-            if (box_yb > 479) and (dir_y2 >= 1) then
-                dir_y2 <= -1;
+            if (alien_yb > 479) and (dir_y2 >= 1) then
+                dir_y2 <= 0-1;
                 y2 <= 419;
-            elsif (box_yt < 1) and (dir_y2 <= -1) then
-                dir_y2 <= 1;   
+            elsif (alien_yt < 1) and (dir_y2 <= -1) then
+                dir_y2 <= 0+1;   
                 y2 <= 0;     
             else 
                 dir_y2 <= dir_y2;
@@ -164,7 +168,7 @@ begin
 		end if;
 	end process;	
 	
-    -- compute the next x,y position of box 
+    -- compute the next x,y position of alien 
     process ( update_pos, x, y, x2, y2 )
     begin
         if rising_edge(update_pos) then 
@@ -172,7 +176,6 @@ begin
 			next_y <= y + dir_y;
 			next_x2 <= x2 + dir_x2;
 			next_y2 <= y2 + dir_y2;
-			inccc <= inccc + 1;
 		end if;
     end process;
     
@@ -183,12 +186,6 @@ begin
     -- process to generate next colors           
     process (pixel_x, pixel_y)
     begin
-           -- white tracks
---           if (unsigned(pixel_x) >= track_l1) and (unsigned(pixel_x) <= track_l2) then
---               red_next<="1111"; green_next<="1111"; blue_next<="1111";
---           elsif (unsigned(pixel_x) >= track_r1) and (unsigned(pixel_x) <= track_r2) then
---               red_next<="1111"; green_next<="1111"; blue_next<="1111";
-
 
            -- DRAW SPACESHIP
            if (unsigned(pixel_x) > car_xl) and (unsigned(pixel_x) < car_xr) and
@@ -198,8 +195,8 @@ begin
                blue_next <= "1111"; 
                
            -- DRAW ALIEN
-           elsif (unsigned(pixel_x) > box_xl) and (unsigned(pixel_x) < box_xr) and
-           (unsigned(pixel_y) > box_yt) and (unsigned(pixel_y) < box_yb) then
+           elsif (unsigned(pixel_x) > alien_xl) and (unsigned(pixel_x) < alien_xr) and
+           (unsigned(pixel_y) > alien_yt) and (unsigned(pixel_y) < alien_yb) then
                red_next <= "1111";
                green_next <= "0000";
                blue_next <= "0000";
