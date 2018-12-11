@@ -10,7 +10,13 @@ entity bouncing_box is
       hsync, vsync: out std_logic;
       red: out std_logic_vector(3 downto 0);
       green: out std_logic_vector(3 downto 0);
-      blue: out std_logic_vector(3 downto 0)
+      blue: out std_logic_vector(3 downto 0);
+      --7 seg
+      SW : in STD_LOGIC_VECTOR(15 downto 0);
+      AN : out STD_LOGIC_VECTOR(7 downto 0);
+      CT : out STD_LOGIC_VECTOR(6 downto 0);
+      DP : out STD_LOGIC;
+      LED : out  STD_LOGIC_VECTOR(3 downto 0)
    );
 end bouncing_box;
 
@@ -32,6 +38,7 @@ architecture bouncing_box of bouncing_box is
    signal alien_xl, alien_yt, alien_xr, alien_yb : integer := 0;
    -- score
    signal score : integer := 0;
+   signal switchesss : std_logic_vector(15 downto 0);
    
    signal update_pos : std_logic := '0';  
    
@@ -51,6 +58,9 @@ begin
     sync_r: entity work.synchronizer port map( clk=>clk, a=>BTNR, b=>btn_r );
     sync_u: entity work.synchronizer port map( clk=>clk, a=>BTNU, b=>btn_u );
     sync_d: entity work.synchronizer port map( clk=>clk, a=>BTND, b=>btn_d );       
+    
+    -- 7 seg display
+    seg: entity work.x7seg_top port map ( CLK100MHZ=>clk, SW=>switchesss, AN=>AN, CT=>CT, DP=>DP, LED=>LED );
       
       
     -- CAR position
@@ -64,6 +74,8 @@ begin
     alien_yt <= y2;
     alien_xr <= x2 + 20;
     alien_yb <= y2 + 20;  
+    
+    switchesss <= std_logic_vector(to_signed(score, switchesss'length));            -- https://www.nandland.com/vhdl/tips/tip-convert-numeric-std-logic-vector-to-integer.html
     
     
     
@@ -87,6 +99,7 @@ begin
                 speedcounter := 0;
                 speed <= speed + 1;
                 score <= score + 1;
+                switchesss <= std_logic_vector(to_signed(score, switchesss'length));
             end if;
          end if;
     end process;

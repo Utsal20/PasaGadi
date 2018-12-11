@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,6 +33,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/new/Synchronizer.vhd
   Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/vga_sync.vhd
+  Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/new/x7seg_top.vhd
   Z:/CS-373-1/PasaGadi/PasaGadi.srcs/sources_1/imports/sources_1/imports/bouncing_box_with_background_and_btn/bouncing_box.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being

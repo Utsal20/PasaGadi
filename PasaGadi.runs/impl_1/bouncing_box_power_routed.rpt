@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Mon Dec 10 15:57:22 2018
+| Date             : Mon Dec 10 18:21:14 2018
 | Host             : LAB-SCI-214-12 running 64-bit major release  (build 9200)
 | Command          : report_power -file bouncing_box_power_routed.rpt -pb bouncing_box_power_summary_routed.pb -rpx bouncing_box_power_routed.rpx
 | Design           : bouncing_box
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 10.261       |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 10.065       |
-| Device Static (W)        | 0.196        |
-| Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 38.2         |
-| Junction Temperature (C) | 71.8         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 18.917 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 18.366                           |
+| Device Static (W)        | 0.551                            |
+| Effective TJA (C/W)      | 4.6                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 111.3                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     5.055 |     1297 |       --- |             --- |
-|   LUT as Logic |     4.145 |      583 |     63400 |            0.92 |
-|   CARRY4       |     0.590 |      176 |     15850 |            1.11 |
-|   Register     |     0.303 |      339 |    126800 |            0.27 |
-|   BUFG         |     0.017 |        3 |        32 |            9.38 |
-|   Others       |     0.000 |       12 |       --- |             --- |
-| Signals        |     4.693 |      755 |       --- |             --- |
-| I/O            |     0.317 |       20 |       210 |            9.52 |
-| Static Power   |     0.196 |          |           |                 |
-| Total          |    10.261 |          |           |                 |
+| Slice Logic    |     5.305 |     1453 |       --- |             --- |
+|   LUT as Logic |     4.316 |      620 |     63400 |            0.98 |
+|   CARRY4       |     0.648 |      205 |     15850 |            1.29 |
+|   Register     |     0.326 |      406 |    126800 |            0.32 |
+|   BUFG         |     0.015 |        3 |        32 |            9.38 |
+|   Others       |     0.000 |       14 |       --- |             --- |
+| Signals        |     4.775 |      898 |       --- |             --- |
+| I/O            |     8.286 |       40 |       210 |           19.05 |
+| Static Power   |     0.551 |          |           |                 |
+| Total          |    18.917 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     9.862 |       9.768 |      0.094 |
-| Vccaux    |       1.800 |     0.039 |       0.011 |      0.028 |
-| Vcco33    |       3.300 |     0.088 |       0.084 |      0.004 |
+| Vccint    |       1.000 |    10.471 |      10.100 |      0.371 |
+| Vccaux    |       1.800 |     0.369 |       0.303 |      0.066 |
+| Vcco33    |       3.300 |     2.344 |       2.340 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |
+| Vccbram   |       1.000 |     0.011 |       0.000 |      0.011 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -138,12 +138,13 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| bouncing_box    |    10.065 |
-|   sync_d        |     0.011 |
+| bouncing_box    |    18.366 |
+|   seg           |     0.264 |
+|   sync_d        |     0.012 |
 |   sync_l        |     0.014 |
-|   sync_r        |     0.013 |
+|   sync_r        |     0.010 |
 |   sync_u        |     0.011 |
-|   vga_sync_unit |     1.117 |
+|   vga_sync_unit |     1.133 |
 +-----------------+-----------+
 
 
