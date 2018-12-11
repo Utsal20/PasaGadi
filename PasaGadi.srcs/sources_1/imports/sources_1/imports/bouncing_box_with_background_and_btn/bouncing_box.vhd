@@ -11,7 +11,7 @@ entity bouncing_box is
       red: out std_logic_vector(3 downto 0);
       green: out std_logic_vector(3 downto 0);
       blue: out std_logic_vector(3 downto 0);
-      --7 seg
+      -- 7 seg
       SW : in STD_LOGIC_VECTOR(15 downto 0);
       AN : out STD_LOGIC_VECTOR(7 downto 0);
       CT : out STD_LOGIC_VECTOR(6 downto 0);
@@ -19,6 +19,8 @@ entity bouncing_box is
       LED : out  STD_LOGIC_VECTOR(3 downto 0)
    );
 end bouncing_box;
+
+
 
 architecture bouncing_box of bouncing_box is
 
@@ -32,16 +34,22 @@ architecture bouncing_box of bouncing_box is
    signal dir_x, dir_y : integer := 1;  
    signal x, y, next_x, next_y : integer := 0;       
    signal car_xl, car_yt, car_xr, car_yb : integer := 0;
-   -- alien
-   signal dir_x2, dir_y2, speed : integer := 1;
+   signal sp_size : integer := 40;
+   -- alien 1
+   signal dir_x2, dir_y2 : integer := 1;
    signal x2, y2, next_x2, next_y2 : integer := 0;
    signal alien_xl, alien_yt, alien_xr, alien_yb : integer := 0;
+   signal al_size : integer := 20;
+   -- alien 3
+   signal dir_x3, dir_y3 : integer := 2;
+   signal x3, y3, next_x3, next_y3 : integer := 0;
+   signal alien3_xl, alien3_yt, alien3_xr, alien3_yb : integer := 0;
+   signal al3_size : integer := 10;
    -- score
    signal score : integer := 0;
    signal switchesss : std_logic_vector(15 downto 0);
    
    signal update_pos : std_logic := '0';  
-   
    
    
    
@@ -66,15 +74,20 @@ begin
     -- CAR position
     car_xl <= x;  
     car_yt <= y;
-    car_xr <= x + 60;
-    car_yb <= y + 60;  
-    
-    -- alien position
+    car_xr <= x + sp_size;
+    car_yb <= y + sp_size;  
+    -- alien1 position
     alien_xl <= x2;  
     alien_yt <= y2;
-    alien_xr <= x2 + 20;
-    alien_yb <= y2 + 20;  
+    alien_xr <= x2 + al_size;
+    alien_yb <= y2 + al_size; 
+    -- alien3 position
+    alien3_xl <= x3;  
+    alien3_yt <= y3;
+    alien3_xr <= x3 + al3_size;
+    alien3_yb <= y3 + al3_size;
     
+    -- 7-seg score display
     switchesss <= std_logic_vector(to_signed(score, switchesss'length));            -- https://www.nandland.com/vhdl/tips/tip-convert-numeric-std-logic-vector-to-integer.html
     
     
@@ -83,11 +96,11 @@ begin
     -- process to generate update position signal
     process ( video_on )
         variable counter : integer := 0;
-        variable speedcounter : integer := 0;
+        variable scorecounter : integer := 0;
     begin
         if rising_edge(video_on) then
             counter := counter + 1;
-            speedcounter := speedcounter + 1;
+            scorecounter := scorecounter + 1;
             if counter > 120 then                           -- INCREASE COUNTER TO SLOW DOWN THE PROGRAM ?????
                 counter := 0;
                 update_pos <= '1';
@@ -95,9 +108,8 @@ begin
                 update_pos <= '0';
             end if;
             
-            if speedcounter > 1000 then
-                speedcounter := 0;
-                speed <= speed + 1;
+            if scorecounter > 1000 then
+                scorecounter := 0;
                 score <= score + 1;
                 switchesss <= std_logic_vector(to_signed(score, switchesss'length));
             end if;
@@ -111,13 +123,13 @@ begin
 	-- x must be computed within this mux since a signal can only have one driver
 	-- compute collision in x or change direction if btn_r or btn_l is pressed
 	-- X DIRECTION CALCULATIONS
-	process ( btn_r, btn_l, dir_x, clk, car_xr, car_xl, car_yt, car_yb, dir_x2,alien_xl,alien_xr,alien_yt,alien_yb)
+	process ( btn_r, btn_l, dir_x, clk, car_xr, car_xl, car_yt, car_yb, dir_x2,alien_xl,alien_xr,alien_yt,alien_yb, dir_x3,alien3_xl,alien3_xr,alien3_yt,alien3_yb )
 	begin
         if rising_edge(clk) then 
             
 		    if (car_xr > 639) and (dir_x = 1) then
                 dir_x <= -1;
-				x <= 579;				
+				x <= 639 - sp_size;				
             elsif (car_xl < 1) and (dir_x = -1) then
                 dir_x <= 1;   
 				x <= 0;				
@@ -133,8 +145,8 @@ begin
             end if;
             -- alien x position
             if (alien_xr > 639) and (dir_x2 >= 1) then
-                dir_x2 <= 0-1;
-                x2 <= 619;                
+                dir_x2 <= -1;
+                x2 <= 639 - al_size;                
             elsif (alien_xl < 1) and (dir_x2 <= -1) then
                 dir_x2 <= 0+1;   
                 x2 <= 0;                
@@ -142,18 +154,30 @@ begin
                 dir_x2 <= dir_x2;
                 x2 <= next_x2;
             end if;
+            -- alien3 x position
+            if (alien3_xr > 639) and (dir_x3 >= 2) then
+                dir_x3 <= -2;
+                x3 <= 639 - al3_size;                
+            elsif (alien3_xl < 1) and (dir_x3 <= -2) then
+                dir_x3 <= 0+2;   
+                x3 <= 0;                
+            else 
+                dir_x3 <= dir_x3;
+                x3 <= next_x3;
+            end if;
 		end if;
 	end process;
 	
-	-- compute collision in y or change direction if btn_u or btn_d is pressed
+
+
 	-- Y DIRECTION CALCULATIONS
-	process ( btn_u, btn_d, dir_y, clk, car_xr, car_xl, car_yt, car_yb, dir_y2,alien_xl,alien_xr,alien_yt,alien_yb)
+	process ( btn_u, btn_d, dir_y, clk, car_xr, car_xl, car_yt, car_yb, dir_y2,alien_xl,alien_xr,alien_yt,alien_yb, dir_y3,alien3_xl,alien3_xr,alien3_yt,alien3_yb)
 	begin
         if rising_edge(clk) then 
                 
 		    if (car_yb > 479) and (dir_y = 1) then
                 dir_y <= -1;
-                y <= 459;
+                y <= 479 - sp_size;
             elsif (car_yt < 1) and (dir_y = -1) then
                 dir_y <= 1;   
                 y <= 0; 	
@@ -170,7 +194,7 @@ begin
             --alien y position
             if (alien_yb > 479) and (dir_y2 >= 1) then
                 dir_y2 <= 0-1;
-                y2 <= 419;
+                y2 <= 479 - al_size;
             elsif (alien_yt < 1) and (dir_y2 <= -1) then
                 dir_y2 <= 0+1;   
                 y2 <= 0;     
@@ -178,17 +202,30 @@ begin
                 dir_y2 <= dir_y2;
                 y2 <= next_y2;
             end if;
+            --alien3 y position
+            if (alien3_yb > 479) and (dir_y3 >= 2) then
+                dir_y3 <= 0-2;
+                y3 <= 479 - al3_size;
+            elsif (alien3_yt < 1) and (dir_y3 <= -2) then
+                dir_y3 <= 0+2;   
+                y3 <= 0;     
+            else 
+                dir_y3 <= dir_y3;
+                y3 <= next_y3;
+            end if;
 		end if;
 	end process;	
 	
     -- compute the next x,y position of alien 
-    process ( update_pos, x, y, x2, y2 )
+    process ( update_pos, x, y, x2, y2, x3, y3 )
     begin
         if rising_edge(update_pos) then 
 			next_x <= x + dir_x;
 			next_y <= y + dir_y;
 			next_x2 <= x2 + dir_x2;
 			next_y2 <= y2 + dir_y2;
+			next_x3 <= x3 + dir_x3;
+			next_y3 <= y3 + dir_y3;
 		end if;
     end process;
     
@@ -212,6 +249,13 @@ begin
            (unsigned(pixel_y) > alien_yt) and (unsigned(pixel_y) < alien_yb) then
                red_next <= "1111";
                green_next <= "0000";
+               blue_next <= "0000";
+               
+           -- DRAW ALIEN 3
+           elsif (unsigned(pixel_x) > alien3_xl) and (unsigned(pixel_x) < alien3_xr) and
+           (unsigned(pixel_y) > alien3_yt) and (unsigned(pixel_y) < alien3_yb) then
+               red_next <= "0000";
+               green_next <= "1111";
                blue_next <= "0000";
 
            -- DRAW (hardcoded) STARS

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Mon Dec 10 18:20:35 2018
+| Date         : Mon Dec 10 22:16:53 2018
 | Host         : LAB-SCI-214-12 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file bouncing_box_control_sets_placed.rpt
 | Design       : bouncing_box
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    19 |
-| Unused register locations in slices containing registers |    44 |
+| Number of unique control sets                            |    23 |
+| Unused register locations in slices containing registers |    64 |
 +----------------------------------------------------------+-------+
 
 
@@ -36,10 +36,9 @@ Table of Contents
 +--------+--------------+
 |      2 |            1 |
 |      4 |            2 |
-|      8 |            1 |
-|     12 |            2 |
-|     14 |            1 |
-|    16+ |           12 |
+|     12 |            1 |
+|     14 |            5 |
+|    16+ |           14 |
 +--------+--------------+
 
 
@@ -49,9 +48,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             320 |           48 |
+| No           | No                    | No                     |             448 |           66 |
 | No           | No                    | Yes                    |               8 |            3 |
-| No           | Yes                   | No                     |             412 |           56 |
+| No           | Yes                   | No                     |             544 |           76 |
 | Yes          | No                    | No                     |              32 |            4 |
 | Yes          | No                    | Yes                    |              40 |           10 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -65,24 +64,28 @@ Table of Contents
 |              Clock Signal              |        Enable Signal       |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
 +----------------------------------------+----------------------------+-----------------------+------------------+----------------+
 |  video_on_BUFG                         |                            |                       |                1 |              2 |
-|  vga_sync_unit/clk_divider_reg_n_0_[0] |                            | reset_IBUF            |                2 |              4 |
 |  clk_IBUF_BUFG                         |                            | reset_IBUF            |                1 |              4 |
-|  clk_IBUF_BUFG                         |                            | dir_x117_out          |                1 |              8 |
-|  clk_IBUF_BUFG                         |                            | dir_y215_out          |                1 |             12 |
-|  clk_IBUF_BUFG                         |                            | dir_y19_out           |                1 |             12 |
-|  clk_IBUF_BUFG                         |                            | dir_x2113_out         |                2 |             14 |
-|  vga_sync_unit/clk_divider_reg_n_0_[0] | vga_sync_unit/Q[0]         | reset_IBUF            |                4 |             20 |
-|  vga_sync_unit/clk_divider_reg_n_0_[0] | vga_sync_unit/v_count_reg0 | reset_IBUF            |                6 |             20 |
-|  vga_sync_unit/Q[0]                    |                            | vga_sync_unit/red_reg |                7 |             24 |
+|  vga_sync_unit/clk_divider_reg_n_0_[0] |                            | reset_IBUF            |                2 |              4 |
+|  clk_IBUF_BUFG                         |                            | dir_x130_out          |                2 |             12 |
+|  clk_IBUF_BUFG                         |                            | dir_x2126_out         |                1 |             14 |
+|  clk_IBUF_BUFG                         |                            | dir_x3122_out         |                2 |             14 |
+|  clk_IBUF_BUFG                         |                            | dir_y2114_out         |                1 |             14 |
+|  clk_IBUF_BUFG                         |                            | dir_y118_out          |                2 |             14 |
+|  clk_IBUF_BUFG                         |                            | dir_y3110_out         |                2 |             14 |
+|  vga_sync_unit/clk_divider_reg_n_0_[0] | vga_sync_unit/v_count_reg0 | reset_IBUF            |                4 |             20 |
+|  vga_sync_unit/clk_divider_reg_n_0_[0] | vga_sync_unit/Q[0]         | reset_IBUF            |                6 |             20 |
+|  vga_sync_unit/Q[0]                    |                            | vga_sync_unit/red_reg |                4 |             24 |
 |  video_on_BUFG                         | score_reg[0]_i_1_n_0       |                       |                4 |             32 |
-|  clk_IBUF_BUFG                         |                            | x2[31]_i_1_n_0        |                6 |             52 |
-|  clk_IBUF_BUFG                         |                            | y[31]_i_1_n_0         |                7 |             52 |
-|  clk_IBUF_BUFG                         |                            | y2[31]_i_1_n_0        |                8 |             54 |
-|  clk_IBUF_BUFG                         |                            | x[31]_i_1_n_0         |                7 |             56 |
-|  clk_IBUF_BUFG                         |                            |                       |               13 |             62 |
+|  clk_IBUF_BUFG                         |                            | y[31]_i_1_n_0         |                8 |             50 |
+|  clk_IBUF_BUFG                         |                            | x3[31]_i_1_n_0        |                8 |             52 |
+|  clk_IBUF_BUFG                         |                            | x2[31]_i_1_n_0        |                7 |             52 |
+|  clk_IBUF_BUFG                         |                            | x[31]_i_1_n_0         |                7 |             52 |
+|  clk_IBUF_BUFG                         |                            | y2[31]_i_1_n_0        |                8 |             52 |
+|  clk_IBUF_BUFG                         |                            | y3[31]_i_1_n_0        |                8 |             52 |
+|  clk_IBUF_BUFG                         |                            |                       |               12 |             62 |
 |  video_on_BUFG                         |                            | score_reg[0]_i_1_n_0  |                8 |             64 |
 |  video_on_BUFG                         |                            | clear                 |                8 |             64 |
-|  update_pos_BUFG                       |                            |                       |               34 |            256 |
+|  update_pos_BUFG                       |                            |                       |               53 |            384 |
 +----------------------------------------+----------------------------+-----------------------+------------------+----------------+
 
 
